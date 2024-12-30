@@ -1,10 +1,7 @@
-//function to reverse the word
-
+// Function to reverse the words in a sentence
 function reverseWords(sentence) {
   // Step 1: Split the sentence into words
   const words = splitSentence(sentence);
-
-  console.log(words);
 
   // Step 2: Reverse the array of words
   const reverseWords = reverseArray(words);
@@ -13,6 +10,7 @@ function reverseWords(sentence) {
   return joinWords(reverseWords);
 }
 
+// Split the sentence into words
 function splitSentence(sentence) {
   let words = [];
   let word = "";
@@ -34,6 +32,7 @@ function splitSentence(sentence) {
   return words;
 }
 
+// Reverse the array of words
 function reverseArray(arr) {
   let left = 0;
   let right = arr.length - 1;
@@ -48,6 +47,7 @@ function reverseArray(arr) {
   return arr;
 }
 
+// Join the reversed words into a sentence
 function joinWords(words) {
   let result = "";
 
@@ -62,4 +62,9 @@ function joinWords(words) {
   return result;
 }
 
-console.log(reverseWords("Hello world this is JavaScript"));
+console.log(reverseWords("Hello world this is JavaScript")); // Output: "JavaScript is this world Hello"
+
+// Approach:
+// 1. Split the sentence into words using `splitSentence` function.
+// 2. Reverse the array of words using `reverseArray` function.
+// 3. Join the reversed words into a sentence using `joinWords` function.
