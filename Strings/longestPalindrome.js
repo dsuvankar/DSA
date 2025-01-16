@@ -1,4 +1,3 @@
-// Function to find the longest palindromic substring
 function longestPalindrome(string) {
   let start = 0;
   let end = 0;
@@ -20,8 +19,8 @@ function longestPalindrome(string) {
   return string.substring(start, end + 1);
 }
 
-// Expand around center to find the length of the palindrome
 function expandAroundCenter(left, right, s) {
+  // Expand around center
   while (left >= 0 && right < s.length && s[left] === s[right]) {
     left--;
     right++;
@@ -29,11 +28,3 @@ function expandAroundCenter(left, right, s) {
 
   return right - left - 1;
 }
-
-console.log(longestPalindrome("babad")); // Output: "bab" or "aba"
-
-// Approach:
-// 1. Iterate through each character in the string and consider it as the center of a palindrome.
-// 2. Expand around the center for both odd and even length palindromes using `expandAroundCenter` function.
-// 3. Update the start and end indices of the longest palindrome found.
-// 4. Return the longest palindromic substring.
