@@ -19,3 +19,4 @@ function swap(arr, i, j) {
 
 const arr = [3, -1, 2, -3, 5, -4];
 console.log(moveNeg(arr));
+const array2 = [0, 1, 0, 3, 12];
