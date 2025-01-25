@@ -1,3 +1,8 @@
+/*
+Question: Move all zeros in an array to the end while maintaining the relative 
+order of non-zero elements.
+*/
+
 function moveZeroesToEnd(arr) {
   let nonZeroIndex = 0;
 
@@ -17,7 +22,23 @@ function moveZeroesToEnd(arr) {
 
 // Example usage:
 const array = [0, 1, 0, 3, 12];
-console.log(moveZeroesToEnd(array)); // Output: [1, 3, 12, 0, 0]
+console.log(moveZeroesToEnd(array));
+console.log(approach2(array));
+
+/*
+Approach 1:
+1. Use two-pointer technique
+2. Move all non-zero elements to front
+3. Fill remaining with zeros
+
+Approach 2:
+1. Use swap technique
+2. Swap zeros with next non-zero number
+3. Continue until end
+
+Time: O(n)
+Space: O(1)
+*/
 
 function approach2(arr) {
   for (let i = 0; i < arr.length; i++) {
@@ -32,5 +53,3 @@ function approach2(arr) {
 
   return arr;
 }
-
-console.log(approach2(array));

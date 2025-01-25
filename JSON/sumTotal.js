@@ -1,3 +1,10 @@
+/*
+Problem Statement:
+Calculate the total revenue from an array of order objects.
+Each order object contains an id and revenue property.
+
+*/
+
 function sumValue(obj) {
   return obj.reduce((total, item) => {
     if (typeof item.revenue === "number") {
@@ -15,3 +22,14 @@ const orders = [
 ];
 
 console.log(sumValue(orders));
+
+/*
+Approach:
+1. Use reduce to iterate through the array
+2. Check if revenue property is a number
+3. Add valid revenue values to accumulator
+4. Return final sum
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+*/

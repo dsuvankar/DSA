@@ -1,3 +1,9 @@
+/*
+Problem Statement:
+Calculate the total price of all books in an array of book objects.
+Each book object contains a title and price property.
+*/
+
 function totalBookPrice(arr) {
   let total = 0;
   arr.forEach((item) => {
@@ -22,3 +28,14 @@ const books2 = [
 
 console.log(totalBookPrice(books1)); // Output: 60
 console.log(totalBookPrice(books2)); // Output: 75
+
+/*
+Approach:
+1. Initialize a total variable to 0
+2. Iterate through each book object using forEach
+3. Add each book's price to the total
+4. Return the final sum
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+*/

@@ -1,3 +1,7 @@
+/*
+Question: Check if a given matrix is symmetric (matrix equals its transpose)
+*/
+
 function isSymmetric(matrix) {
   let n = matrix.length;
 
@@ -32,3 +36,14 @@ const matrix2 = [
 
 console.log(isSymmetric(matrix1)); // Output: true
 console.log(isSymmetric(matrix2)); // Output: false
+
+/*
+Approach:
+1. Check if matrix is square (n x n)
+2. Compare elements matrix[i][j] with matrix[j][i]
+3. Return false if any pair doesn't match
+4. Return true if all elements match
+
+Time: O(n²)
+Space: O(1)
+*/
